@@ -10,18 +10,21 @@ function greet(name) {
 }
 console.log('Greeting for Tim: ', greet('Tim'));
 const getArea = (width, height) => {
-  return width * height;
+  const area = width * height;
+  return area;
 };
 console.log('Area of width 4 and height 5: ', getArea(4, 5));
 const getFirstName = (person) => {
-  return person['firstName'];
+  const firstN = person.firstName;
+  return firstN;
 };
 console.log(
   'First name of Tim Jimbo: ',
   getFirstName({ firstName: 'Tim', lastName: 'Jimbo' })
 );
 const getLastElement = (array) => {
-  return array[array.length - 1];
+  const lastElement = array[array.length - 1];
+  return lastElement;
 };
 console.log('Last value in array A, B, C: ', getLastElement(['A', 'B', 'C']));
 function callOtherFunction(otherFunction, param1, param2) {

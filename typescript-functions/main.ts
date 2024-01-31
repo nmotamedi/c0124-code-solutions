@@ -17,14 +17,16 @@ function greet(name: string): string {
 
 console.log('Greeting for Tim: ', greet('Tim'));
 
-const getArea: any = (width: number, height: number): number => {
-  return width * height;
+const getArea = (width: number, height: number): number => {
+  const area: number = width * height;
+  return area;
 };
 
 console.log('Area of width 4 and height 5: ', getArea(4, 5));
 
-const getFirstName: any = (person: Person): string => {
-  return person.firstName;
+const getFirstName = (person: Person): string => {
+  const firstN: string = person.firstName;
+  return firstN;
 };
 
 console.log(
@@ -32,8 +34,9 @@ console.log(
   getFirstName({ firstName: 'Tim', lastName: 'Jimbo' })
 );
 
-const getLastElement: any = (array: unknown[]): unknown => {
-  return array[array.length - 1];
+const getLastElement = (array: unknown[]): unknown => {
+  const lastElement: unknown = array[array.length - 1];
+  return lastElement;
 };
 
 console.log('Last value in array A, B, C: ', getLastElement(['A', 'B', 'C']));
