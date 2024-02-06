@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+  </head>
+  <body>
+    <h1>Coding Form!</h1>
+    <form action="" method="post">
+      <div class="coding-form">
+        <label for="email">Email</label>
+        <br />
+        <input type="email" name="email" id="email" />
+      </div>
+      <div class="coding-form">
+        <label for="coding-cool">Why is coding cool?</label>
+        <br />
+        <select id="coding-cool" name="coding-cool">
+          <option selected>Select an option</option>
+          <option>Because it's interesting</option>
+          <option>Because it's fun</option>
+          <option>Because it's powerful</option>
+        </select>
+      </div>
+      <div class="coding-form">
+        <fieldset style="border: none">
+          <legend>Favorite Language (choose one)</legend>
+          <input type="radio" id="HTML" name="language" value="HTML" />
+          <label for="HTML"> HTML </label>
+          <input type="radio" id="CSS" name="language" value="CSS" />
+          <label for="CSS"> CSS </label>
+          <input
+            type="radio"
+            id="JavaScript"
+            name="language"
+            value="JavaScript" />
+          <label for="JavaScript"> JavaScript </label>
+        </fieldset>
+      </div>
+      <div class="coding-form">
+        <p>Would you like to sign up for more information</p>
+        <input
+          type="checkbox"
+          id="sign-up"
+          name="sign-up"
+          value="Sign me up!" />
+        <label for="sign-Up">Sign me up!</label>
+      </div>
+      <div class="coding-form">
+        <label for="comments">Comments</label>
+        <br />
+        <textarea cols="20" rows="8"></textarea>
+      </div>
+      <div class="coding-form">
+        <button type="button">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
