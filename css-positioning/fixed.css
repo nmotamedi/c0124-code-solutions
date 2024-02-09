@@ -1,0 +1,12 @@
+html {
+  font-size: 22px;
+}
+
+.page-title {
+  font-size: 3rem;
+  position: fixed;
+  text-align: center;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+}
