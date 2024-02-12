@@ -1,0 +1,174 @@
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.row-half {
+  flex-basis: 50%;
+}
+
+.locations {
+  justify-content: center;
+  text-align: center;
+  background-color: #fafafa;
+  color: #6e6e6e;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.locations-list {
+  display: flex;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.menu .column-quarter {
+  flex-basis: 25%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu .column-quarter h4 {
+  margin: 5px;
+}
+
+.column-fifth {
+  flex-basis: 20%;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.row-third {
+  flex-basis: 33.3%;
+}
+
+.row-fifth {
+  flex-basis: 20%;
+}
+
+.hero {
+  padding: 66px;
+  background-image: linear-gradient(0deg, #807c7e4d, #807c7e4d),
+    url('images/hero.jpg');
+  background-size: 100%;
+  background-size: contain;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.menu {
+  background-color: #525351;
+  color: white;
+  padding: 50px;
+  align-items: flex-start;
+}
+
+.header,
+.hero,
+.locations,
+.learn,
+.menu,
+.footer,
+button {
+  font-family: Avenir, sans-serif;
+}
+
+.hero-header,
+.locations-subject > h2,
+.learnmore {
+  font-family: 'Tiempos Headline', serif;
+}
+
+img {
+  width: 100px;
+}
+
+.header {
+  color: #a6a6a6;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.header-titles {
+  text-align: center;
+}
+
+.hero-button {
+  align-self: flex-start;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+.menu-head {
+  text-transform: uppercase;
+}
+
+button {
+  background-color: #294363;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-us {
+  font-size: 0.67rem;
+  padding: 6px 10px;
+}
+
+.menu img {
+  margin-bottom: 20px;
+}
+
+.menu p {
+  margin: 2px;
+}
+
+.cities {
+  font-size: 0.75rem;
+}
+
+.locations-subject > p {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.learn p {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.learn h2 {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.get-started {
+  flex-basis: 17%;
+}
+
+.learn {
+  justify-content: space-between;
+}
+
+.footer > .column-half {
+  flex-basis: 17%;
+}
