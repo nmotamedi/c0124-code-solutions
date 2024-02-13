@@ -1,3 +1,4 @@
+// Examine solution for this problem. Mine works, but isn't big O.
 export function findFirstNonRepeatingCharacter(
   str: string
 ): string | undefined {
