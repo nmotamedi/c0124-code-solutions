@@ -30,6 +30,20 @@ function listenerHandler(event: KeyboardEvent): void {
       (1 - incorrect / (index - 1))
     ).toFixed(2)}%`;
     $sentenceDiv?.appendChild($accuracy);
+    const $button = document.createElement('button');
+    $button.textContent = 'Play again?';
+    $sentenceDiv?.appendChild($button);
+    $button.addEventListener('click', () => {
+      $sentenceDiv?.removeChild($accuracy);
+      $spanList.forEach((span: HTMLElement) => {
+        span.classList.remove('green');
+      });
+      index = 0;
+      incorrect = 0;
+      $spanList[index].classList.add('active');
+      document.addEventListener('keydown', listenerHandler);
+      $sentenceDiv?.removeChild($button);
+    });
   }
 }
 

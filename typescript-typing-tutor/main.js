@@ -8,7 +8,7 @@ let incorrect = 0;
 $spanList[index].classList.add('active');
 function listenerHandler(event) {
   if (index < $spanList.length) {
-    if (event.key === $spanList[index]['innerText']) {
+    if (event.key === $spanList[index].innerText) {
       $spanList[index].classList.add('green');
       $spanList[index].classList.remove('active');
       $spanList[index].classList.remove('red');
@@ -29,6 +29,20 @@ function listenerHandler(event) {
       (1 - incorrect / (index - 1))
     ).toFixed(2)}%`;
     $sentenceDiv?.appendChild($accuracy);
+    const $button = document.createElement('button');
+    $button.textContent = 'Play again?';
+    $sentenceDiv?.appendChild($button);
+    $button.addEventListener('click', () => {
+      $sentenceDiv?.removeChild($accuracy);
+      $spanList.forEach((span) => {
+        span.classList.remove('green');
+      });
+      index = 0;
+      incorrect = 0;
+      $spanList[index].classList.add('active');
+      document.addEventListener('keydown', listenerHandler);
+      $sentenceDiv?.removeChild($button);
+    });
   }
 }
 document.addEventListener('keydown', listenerHandler);
