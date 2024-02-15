@@ -1,8 +1,8 @@
 'use strict';
-let $form = document.querySelector('#contact-form');
+const $form = document.querySelector('#contact-form');
 $form.addEventListener('submit', (event) => {
   event.preventDefault();
-  let $formElements = $form.elements;
+  const $formElements = $form.elements;
   const controlNames = {
     name: $formElements.name.value,
     email: $formElements.email.value,

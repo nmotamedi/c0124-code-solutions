@@ -8,18 +8,18 @@ if (!$userName || !$email || !$message) {
 
 function handleFocus(event: Event): void {
   console.log('Focus event has fired');
-  const eventTarget = event.target as HTMLInputElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('Focus eventTarget name: ', eventTarget.name);
 }
 
 function handleBlur(event: Event): void {
   console.log('Blur event has fired');
-  const eventTarget = event.target as HTMLInputElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('Blur eventTarget name: ', eventTarget.name);
 }
 
 function handleInput(event: Event): void {
-  const eventTarget = event.target as HTMLInputElement;
+  const eventTarget = event.target as HTMLInputElement | HTMLTextAreaElement;
   console.log('Input eventTarget name: ', eventTarget.name);
   console.log('Input eventTarget value: ', eventTarget.value);
 }

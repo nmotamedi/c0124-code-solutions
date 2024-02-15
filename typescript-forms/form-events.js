@@ -7,16 +7,16 @@ if (!$userName || !$email || !$message) {
 }
 function handleFocus(event) {
   console.log('Focus event has fired');
-  let eventTarget = event.target;
+  const eventTarget = event.target;
   console.log('Focus eventTarget name: ', eventTarget.name);
 }
 function handleBlur(event) {
   console.log('Blur event has fired');
-  let eventTarget = event.target;
+  const eventTarget = event.target;
   console.log('Blur eventTarget name: ', eventTarget.name);
 }
 function handleInput(event) {
-  let eventTarget = event.target;
+  const eventTarget = event.target;
   console.log('Input eventTarget name: ', eventTarget.name);
   console.log('Input eventTarget value: ', eventTarget.value);
 }
