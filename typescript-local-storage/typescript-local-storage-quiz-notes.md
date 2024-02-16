@@ -5,12 +5,13 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - How do you store data in `localStorage`?
-
+  .setItems
 - How do you retrieve data from `localStorage`?
-
+  .getItems
 - What data type can `localStorage` save in the browser?
-
+  key value pairs of Strings
 - When does the `'beforeunload'` event fire on the `window` object?
+  before it's closed.
 
 ## Notes
 
