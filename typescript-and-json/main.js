@@ -13,7 +13,7 @@ console.log('type of array: ', typeof array);
 const booksJSON = JSON.stringify(array);
 console.log('booksJSON: ', booksJSON);
 console.log('type of booksJSON: ', typeof booksJSON);
-const studentJSON = '[{"Number id":2302, "String name":"Nader Motamedi"}]';
+const studentJSON = '{"id":2302, "name":"Nader Motamedi"}';
 console.log('studentJSON: ', studentJSON);
 console.log('type of studentJSON: ', typeof studentJSON);
 const studentObj = JSON.parse(studentJSON);
