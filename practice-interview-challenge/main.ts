@@ -7,25 +7,20 @@ interface RangeReport {
 }
 
 function getRangeReport(start: number, end: number): RangeReport {
-  // setting range
   const range: number[] = [];
-  for (let i = start; i <= end; i++) {
-    range.push(i);
-  }
-  // setting total
-  const total = range.reduce((total: number, num: number) => total + num);
-  // setting average
-  const average = total / range.length;
-  // setting odds and evens
+  let total = 0;
   const odds: number[] = [];
   const evens: number[] = [];
-  range.forEach((num: number) => {
-    if (num % 2 === 0) {
-      evens.push(num);
+  for (let i = start; i <= end; i++) {
+    range.push(i);
+    total += i;
+    if (i % 2 === 0) {
+      evens.push(i);
     } else {
-      odds.push(num);
+      odds.push(i);
     }
-  });
+  }
+  const average = total / range.length;
   const rangeReport: RangeReport = {
     total,
     odds,
