@@ -1,16 +1,15 @@
 const $countdown = document.querySelector('.countdown-display');
+let count = 3;
 
 function countdown(): void {
   if (!$countdown) throw new Error('$countdown query failed');
-  const countdownNum = +$countdown.textContent!;
-  $countdown.textContent = `${countdownNum - 1}`;
-}
-
-function earthText(): void {
-  clearInterval(intervalID);
-  if (!$countdown) throw new Error('$countdown query failed');
-  $countdown.textContent = '~Earth Beeeelooowww Us~';
+  if (count === 0) {
+    clearInterval(intervalID);
+    $countdown.textContent = '~Earth Beeeelooowww Us~';
+  } else {
+    $countdown.textContent = `${count}`;
+  }
+  count--;
 }
 
 const intervalID = setInterval(countdown, 1000);
-setTimeout(earthText, 4000);
