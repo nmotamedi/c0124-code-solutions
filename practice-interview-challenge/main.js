@@ -1,24 +1,19 @@
 'use strict';
 function getRangeReport(start, end) {
-  // setting range
   const range = [];
-  for (let i = start; i <= end; i++) {
-    range.push(i);
-  }
-  // setting total
-  const total = range.reduce((total, num) => total + num);
-  // setting average
-  const average = total / range.length;
-  // setting odds and evens
+  let total = 0;
   const odds = [];
   const evens = [];
-  range.forEach((num) => {
-    if (num % 2 === 0) {
-      evens.push(num);
+  for (let i = start; i <= end; i++) {
+    range.push(i);
+    total += i;
+    if (i % 2 === 0) {
+      evens.push(i);
     } else {
-      odds.push(num);
+      odds.push(i);
     }
-  });
+  }
+  const average = total / range.length;
   const rangeReport = {
     total,
     odds,
