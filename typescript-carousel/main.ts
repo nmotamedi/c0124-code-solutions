@@ -10,21 +10,25 @@ let position = 0;
 let intervalID = setInterval(upSwitchIcon, 3000);
 
 function upSwitchIcon(): void {
+  clearInterval(intervalID);
   if (position === 4) {
     position = 0;
   } else {
     position++;
   }
   changeImageAndIcon();
+  intervalID = setInterval(upSwitchIcon, 3000);
 }
 
 function downSwitchIcon(): void {
+  clearInterval(intervalID);
   if (position === 0) {
     position = 4;
   } else {
     position--;
   }
   changeImageAndIcon();
+  intervalID = setInterval(upSwitchIcon, 3000);
 }
 
 function changeImageAndIcon(): void {
@@ -42,15 +46,11 @@ function changeImageAndIcon(): void {
 }
 
 $rightArrow.addEventListener('click', () => {
-  clearInterval(intervalID);
   upSwitchIcon();
-  intervalID = setInterval(upSwitchIcon, 3000);
 });
 
 $leftArrow.addEventListener('click', () => {
-  clearInterval(intervalID);
   downSwitchIcon();
-  intervalID = setInterval(upSwitchIcon, 3000);
 });
 
 $iconCol.addEventListener('click', (event: Event) => {
@@ -60,5 +60,14 @@ $iconCol.addEventListener('click', (event: Event) => {
     position = +$eventTarget.dataset.pos!;
     changeImageAndIcon();
     intervalID = setInterval(upSwitchIcon, 3000);
+  }
+});
+
+window.addEventListener('keydown', (event: KeyboardEvent) => {
+  const key = event.key;
+  if (key === 'ArrowLeft') {
+    downSwitchIcon();
+  } else if (key === 'ArrowRight') {
+    upSwitchIcon();
   }
 });

@@ -9,20 +9,24 @@ if (!$rightArrow || !$leftArrow || !$iconCol)
 let position = 0;
 let intervalID = setInterval(upSwitchIcon, 3000);
 function upSwitchIcon() {
+  clearInterval(intervalID);
   if (position === 4) {
     position = 0;
   } else {
     position++;
   }
   changeImageAndIcon();
+  intervalID = setInterval(upSwitchIcon, 3000);
 }
 function downSwitchIcon() {
+  clearInterval(intervalID);
   if (position === 0) {
     position = 4;
   } else {
     position--;
   }
   changeImageAndIcon();
+  intervalID = setInterval(upSwitchIcon, 3000);
 }
 function changeImageAndIcon() {
   for (let i = 0; i < $images.length; i++) {
@@ -38,14 +42,10 @@ function changeImageAndIcon() {
   }
 }
 $rightArrow.addEventListener('click', () => {
-  clearInterval(intervalID);
   upSwitchIcon();
-  intervalID = setInterval(upSwitchIcon, 3000);
 });
 $leftArrow.addEventListener('click', () => {
-  clearInterval(intervalID);
   downSwitchIcon();
-  intervalID = setInterval(upSwitchIcon, 3000);
 });
 $iconCol.addEventListener('click', (event) => {
   const $eventTarget = event.target;
@@ -54,5 +54,13 @@ $iconCol.addEventListener('click', (event) => {
     position = +$eventTarget.dataset.pos;
     changeImageAndIcon();
     intervalID = setInterval(upSwitchIcon, 3000);
+  }
+});
+window.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (key === 'ArrowLeft') {
+    downSwitchIcon();
+  } else if (key === 'ArrowRight') {
+    upSwitchIcon();
   }
 });
