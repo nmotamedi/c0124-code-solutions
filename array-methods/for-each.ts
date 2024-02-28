@@ -4,6 +4,6 @@ values.forEach((value: number) => {
   console.log(value);
 });
 console.log('Reverse order: ');
-values.forEach((value: number) => {
-  console.log(values[values.length - values.indexOf(value) - 1]);
+values.forEach((value: number, index: number) => {
+  console.log(values[values.length - index - 1]);
 });
