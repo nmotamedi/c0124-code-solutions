@@ -1,0 +1,500 @@
+   84  git add .
+   85  git status
+   86  git commit -m "Updated to fix NoEntries toggle bug #2"
+   87  git push origin issue-2-user-can-view-their-entries 
+   88  clear
+   89  npx tsc --watch
+   90  git status
+   91  git add .
+   92  git status
+   93  git commit -m "Changes based on Shawn notes #2"
+   94  git push origin issue-2-user-can-view-their-entries 
+   95  clear
+   96  git switch main
+   97  git pull origin main
+   98  git branch issue-3-user-can-edit-their-entries
+   99  git switch issue-3-user-can-edit-their-entries 
+  100  clear
+  101  npx tsc --watch
+  102  git add .
+  103  git status
+  104  git commit -m "Added pencil icon #3"
+  105  npx tsc --watch
+  106  git status
+  107  git add .
+  108  git status
+  109  git commit -m "Added edit text info population #3"
+  110  npx tsc 
+  111  git add .
+  112  git commit -m "Added edit text info population #3"
+  113  git push origin issue-3-user-can-edit-their-entries 
+  114  clear
+  115  npx tsc --watch
+  116  git add .
+  117  git commit -m "Completed updating submit handler #3"
+  118  git push origin issue-3-user-can-edit-their-entries 
+  119  clear
+  120  git add index.html 
+  121  git commit -m "Updated index.html to fix Edit Entry title formatting"
+  122  git push origin issue-3-user-can-edit-their-entries 
+  123  clear
+  124  npx tsc --watch
+  125  git status
+  126  git add .
+  127  git commit -m "Updated to replace singular ListItem when editing"
+  128  git push origin issue-3-user-can-edit-their-entries 
+  129  npx tsc --watch
+  130  git add .
+  131  git status
+  132  git commit -m "Updating setAttribute() to .value #3"
+  133  git push origin issue-3-user-can-edit-their-entries 
+  134  clear
+  135  git switch main
+  136  git pull origin main
+  137  clear
+  138  git branch issue-4-user-can-delete-their-entry
+  139  git switch issue-4-user-can-delete-their-entry 
+  140  npx tsc --watch
+  141  git status
+  142  git add .
+  143  git status
+  144  git commit -m "Added delete button, add confirmation modal, format modal buttons, closes on cancel"
+  145  git push origin issue-4-user-can-delete-their-entry 
+  146  clear
+  147  npx tsc --watch
+  148  git status
+  149  git add .
+  150  git status
+  151  git commit -m "Added confirm delete functionality and fixed swapping bug #4"
+  152  git push origin issue-4-user-can-delete-their-entry 
+  153  clear
+  154  npx tsc --watch
+  155  git status
+  156  git add .
+  157  git commit -m "Updated .js's"
+  158  git status
+  159  git restore --staged js/data.js 
+  160  git restore --stages js/main.js
+  161  git restore --staged js/main.js
+  162  git status
+  163  git restore js/main.js 
+  164  git restore js/data.js 
+  165  git clear
+  166  clear
+  167  git status
+  168  git add .
+  169  git commit -m "Updated HTML to change absolute anchors to flex."
+  170  git push origin issue-4-user-can-delete-their-entry 
+  171  git status
+  172  git add css/styles.css 
+  173  git commit -m "Updated css styling"
+  174  git push origin issue-4-user-can-delete-their-entry 
+  175  clear
+  176  git switch main
+  177  git pull origin main
+  178  clear
+  179  git branch issue-5-users-can-search-their-entries
+  180  git switch issue-5-users-can-search-their-entries
+  181  npx tsc --watch
+  182  git add .
+  183  git status
+  184  git commit -m "Completed search functionality #9"
+  185  git push origin issue-5-users-can-search-their-entries 
+  186  clear
+  187  git switch main
+  188  git pull origin main
+  189  clear
+  190  git branch issue-6-user-can-sort-entries-by-date-added
+  191  git switch issue-6-user-can-sort-entries-by-date-added 
+  192  clear
+  193  npm tsc --watch
+  194  npx tsc --watch
+  195  git status
+  196  git add .
+  197  git commit -m "Completed sort functionality #11"
+  198  git push origin issue-6-user-can-sort-entries-by-date-added 
+  199  clear
+  200  npx tsc 
+  201  npx tsc --watch
+  202  git status
+  203  git add .
+  204  git status
+  205  git commit -m "Completed styling for header bar, sort, new buttons #11"
+  206  git push origin issue-6-user-can-sort-entries-by-date-added 
+  207  clear
+  208  npx tsc --watch
+  209  git status
+  210  git add .
+  211  git commit -m "Updated the order in which entries are added depending on sort order #11"
+  212  git push origin issue-6-user-can-sort-entries-by-date-added 
+  213  clear
+  214  git switch main
+  215  git pull origin main
+  216  clear
+  217  git branch issue-7-user-can-add-tags-to-an-entry
+  218  git switch issue-7-user-can-add-tags-to-an-entry 
+  219  clear
+  220  npx tsc --watch
+  221  git status
+  222  git add .
+  223  git status
+  224  git commit -m "added textArea for tags, added event listener for "enter keydown", added tag icons to the entry form, updated interface to include tags, updated data.entries to include tags #13"
+  225  git status
+  226  git commit -m "added textArea for tags, added event listener for "enter keydown", added tag icons to the entry form, updated interf
+  227  ace to include tags, updated data.entries to include tags #1"
+  228  added textArea for tags, added event listener for 'enter keydown', added tag icons to the entry form, updated interf
+  229  ace to include tags, updated data.entries to include tags #13"
+  230  git commit -m "added textArea for tags, added event listener for 'enter keydown', added tag icons to the entry form, updated interface to include tags, updated data.entries to include tags #13"
+  231  npx tsc --watch
+  232  git add .
+  233  git commit -m "added tag textarea, added tag icons and appended tags array on enter keydown, updated interfaces for tags"
+  234  git push origin issue-7-user-can-add-tags-to-an-entry 
+  235  clear
+  236  npx tsc --watch
+  237  npx tsc --watch
+  238  git add .
+  239  git commit -m "Updated tags implementation"
+  240  git push origin issue-7-user-can-add-tags-to-an-entry 
+  241  clear
+  242  npx tsc --watch
+  243  git add .
+  244  git commit -m "added the ability to remove tags when making a new entry"
+  245  git push origin issue-7-user-can-add-tags-to-an-entry 
+  246  clear
+  247  npx tsc --watch
+  248  git add .
+  249  git status
+  250  git commit -m "fixed keydown bug"
+  251  git push origin issue-7-user-can-add-tags-to-an-entry 
+  252  npx tsc --watch
+  253  git add .
+  254  git commit -m "Updated edit and delete functionality for tags"
+  255  npx tsc 
+  256  git add .
+  257  git status
+  258  git commit -m "Updated editing and deletion of tags"
+  259  git push origin issue-7-user-can-add-tags-to-an-entry 
+  260  clear
+  261  git switch main
+  262  git pull origin main
+  263  clear
+  264  git status
+  265  git add .
+  266  git commit -m "added styling and sort by Tag"
+  267  git push origin main
+  268  clear
+  269  git pull origin main
+  270  git status
+  271  git branch issue-8-user-can-filter-based-on-tags
+  272  git switch issue-8-user-can-filter-based-on-tags 
+  273  npx tsc --watch
+  274  git add .
+  275  git commit -m "Completed functionality"
+  276  git push origin issue-8-user-can-filter-based-on-tags 
+  277  clear
+  278  git sswitch main
+  279  git switch main
+  280  git pull origin main
+  281  clear
+  282  cd /workspaces
+  283  git clone <git@github.com:nmotamedi/week-planner.git>
+  284  git clone git@github.com:nmotamedi/week-planner.git
+  285  cd week-planner
+  286  npm install
+  287  clear
+  288  git add .
+  289  git commit -m "finished up table html"
+  290  git push origin main
+  291  git pull origin main
+  292  npx tsc --watch
+  293  git add .
+  294  git commit -m "Finished modal, added button functionality, started submit functionality" --no-verify
+  295  git push origin main
+  296  git add .
+  297  git commit -m "updated main.ts" --no-verify
+  298  git push origin main
+  299  git pull origin main
+  300  npx tsc --watch
+  301  git add .
+  302  git commit -m "Tried hiding" --no-verify
+  303  git push origin main 
+  304  npx tsc 
+  305  git add .
+  306  git commit -m "Updated ts" --no-verify
+  307  git push origin main
+  308  clear
+  309  git pull origin main
+  310  clear
+  311  git status
+  312  git pull origin main
+  313  npx tsc --watch
+  314  cd .
+  315  git add .
+  316  git commit -m "added class hidden to TD sort" --no-verify
+  317  git push origin main 
+  318  git pull origin main
+  319  npx tsc --watch
+  320  git add .
+  321  git commit -m "attempted to fix the bug. added styling to buttons" --no-verify
+  322  git commit origin main
+  323  git add origin main
+  324  git push origin main 
+  325  clear
+  326  cd .
+  327  cd ..
+  328  git branch practice-interview-challenge
+  329  git switch practice-interview-challenge 
+  330  cd practice-interview-challenge/
+  331  npx tsc --watch
+  332  npx tsc--watch
+  333  npx tsc --watch
+  334  cd ..
+  335  git status
+  336  git add practice-interview-challenge/
+  337  git status
+  338  git commit -m "Completed practive-interview-challenge - Nader Motamedi"
+  339  cd practice-interview-challenge/
+  340  npx tsc 
+  341  cd ..
+  342  git status
+  343  git add practice-interview-challenge/main.ts 
+  344  git add practice-interview-challenge/main.js 
+  345  git commit -m "completed practice-interview-challenge - Nader Motamedi"
+  346  git push origin practice-interview-challenge 
+  347  git switch main
+  348  git pull origin main
+  349  cs practice-interview-challenge/
+  350  cd practice-interview-challenge/
+  351  npx tsc --watch 
+  352  cd ..
+  353  git status
+  354  git restore practice-interview-challenge/main.ts
+  355  git restore practice-interview-challenge/main.js 
+  356  git switch practice-interview-challenge 
+  357  cd practice-interview-challenge/
+  358  npx tsc 
+  359  cd ..
+  360  git add practice-interview-challenge/main.ts
+  361  git add practice-interview-challenge/main.js 
+  362  git commit -m "simplified solution with 1 loop"
+  363  git push origin practice-interview-challenge 
+  364  clear
+  365  git switch main 
+  366  git pull origin main
+  367  clear
+  368  git branch typescript-timers
+  369  git switch typescript-timers 
+  370  cd typescript-timers/
+  371  npx tsc --watch
+  372  cd ..
+  373  git add typescript-timers/
+  374  git commit -m "Complete typescript-timers - Nader Motamedi"
+  375  git push origin typescript-timers 
+  376  git switch main
+  377  git switch typescript-timers 
+  378  cd typescript-timers/
+  379  npx tsc --watch
+  380  cd ..
+  381  git add typescript-timers/interval.js
+  382  git add typescript-timers/interval.ts 
+  383  git add typescript-timers/timeout.js 
+  384  git status
+  385  git commit -m "Updated interval.ts"
+  386  git push origin typescript-timers 
+  387  clear
+  388  git switch main 
+  389  git pull origin main
+  390  clear
+  391  git branch typescript-carousel
+  392  git switch typescript-carousel 
+  393  cd typescript-carousel/
+  394  npx tsc --watch
+  395  cd ..
+  396  git add typescript-carousel/
+  397  git status
+  398  git commit -m "Complete typescript-carousel - Nader Motamedi"
+  399  git push origin typescript-carousel 
+  400  clear
+  401  git switch main
+  402  git pull origin main
+  403  clear
+  404  git switch practice-exercises 
+  405  git switch main
+  406  clear
+  407  git switch typescript-carousel 
+  408  cd typescript-carousel/
+  409  npx tsc --watch
+  410  cd ..
+  411  git add typescript-carousel/main.js
+  412  git add typescript-carousel/main.ts 
+  413  git commit -m "Added keydown carousel functionality"
+  414  git push origin typescript-carousel 
+  415  clear
+  416  git switch main
+  417  git pull origin main
+  418  clear
+  419  git branch typescript-destructuring
+  420  git switch typescript-destructuring 
+  421  cd typescript-destructuring/
+  422  npx tsc --watch
+  423  cd ..
+  424  git status
+  425  git add typescript-destructuring/
+  426  git status
+  427  git commit -m "Completed typescript-destructuring - Nader Motamedi"
+  428  git push origin typescript-destructuring 
+  429  clear
+  430  clear
+  431  git switch main
+  432  git pull origin main
+  433  clear
+  434  git branch typescript-operators
+  435  git switch typescript-operators
+  436  cd typescript-operators
+  437  npx tsc --watch
+  438  cd ..
+  439  git add typescript-operators/
+  440  git commit -m "Complete typescript-operators"
+  441  git push origin typescript-operators
+  442  git switch main
+  443  git status
+  444  git switch typescript-operators
+  445  cd typescript-operators
+  446  npx tsc --watch
+  447  cd ..
+  448  git add typescript-operators/main.ts
+  449  git add typescript-operators/main.js 
+  450  git status
+  451  git commit -m "Updated AND Operator"
+  452  git push origin typescript-operators
+  453  git switch main
+  454  git pull origin main
+  455  clear
+  456  git switch example
+  457  git status
+  458  git switch main
+  459  git status
+  460  clear
+  461  git branch array-methods
+  462  git switch array-methods
+  463  cd array-methods
+  464  npx tsc --watch
+  465  npx tsc --watch
+  466  git adcd ..
+  467  cd ..
+  468  git add array-methods/
+  469  git commit -m "Completed array-methods - Nader Motamedi"
+  470  git push origin array-methods
+  471  git switch main
+  472  git status
+  473  git add array-methods/filter.js 
+  474  git add array-methods/find.js 
+  475  git add array-methods/for-each.js 
+  476  git add array-methods/map.js 
+  477  git commit -m "Updated .js"
+  478  git status
+  479  git push origin array-methods 
+  480  git status
+  481  git status
+  482  git push origin array-methods 
+  483  git commit -m "Updating js"
+  484  --allow-empty
+  485  git commit -m "updated js" --allow-empty
+  486  git commit -m "updated js" --no-verify
+  487  git push origin array-methods 
+  488  cd typescript-methods/
+  489  npx tsc --watch
+  490  cd ..
+  491  git add array-methods/for-each.js
+  492  git add array-methods/for-each.ts 
+  493  git add typescript-methods/main.js 
+  494  git status
+  495  git commit -m "Completed array-methods"
+  496  git push origin array-methods 
+  497  clear
+  498  git switch main 
+  499  git pull origin main
+  500  clear
+  501  git switch array-methods 
+  502  cd array-methods/
+  503  npx tsc --watch
+  504  cd ..
+  505  git add array-methods/for-each.js
+  506  git add array-methods/for-each.ts
+  507  git commit -m "Updated index for foreach"
+  508  git push origin array-methods 
+  509  git switch main
+  510  git pull origin main
+  511  clear
+  512  git branch command-line-basics
+  513  git switch command-line-basics 
+  514  cd command-line-basics/
+  515  man man
+  516  man cat
+  517  man cat
+  518  cat laziness.txt
+  519  cat impatience.txt
+  520  cat hubris.txt
+  521  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  522  cat three-virtues.txt 
+  523  man ls
+  524  man ls
+  525  clear
+  526  ls
+  527  ls -a
+  528  ls -F
+  529  ls -a -F
+  530  ls lfz-staff/
+  531  ls lfz-staff -a
+  532  man ls
+  533  ls lfz-staff -F
+  534  ls -aF lfz-staff > lfz-staff/constents.txt
+  535  cat lfz-staff/constents.txt 
+  536  clear
+  537  man pwd
+  538  pwd
+  539  pwd > i-was-here.txt
+  540  ls 
+  541  cat i-was-here.txt 
+  542  clear
+  543  man echo
+  544  echo "hello world"
+  545  echo "hello world" > hello.txt
+  546  ls 
+  547  cat hello.txt 
+  548  clear
+  549  man touch
+  550  touch tag-youre-it.txt
+  551  touch snoot/boop.txt
+  552  ls snoot 
+  553  clear
+  554  man mkdir
+  555  mkdir parent
+  556  ls
+  557  mkdir -p parent
+  558  mkdir -p parent/child/grandparent
+  559  touch parent/child/grandparent .gitkeep
+  560  touch parent/child/grandparent/.gitkeep
+  561  touch parent/child/grandparent/ .gitkeep
+  562  touch parent/child/grandparent/ .gitkeep
+  563  ls -a parent/child/grandparent/
+  564  clear
+  565  man mv
+  566  mv pokiemans/ pokemon/
+  567  ls
+  568  man rm
+  569  rm lol.txt
+  570  ls
+  571  rm -r kill-me/
+  572  ls
+  573  clear
+  574  man cp
+  575  cp and-then.txt no-and-then.txt
+  576  ls
+  577  cat and-then.txt 
+  578  cat no-and-then.txt 
+  579  clear
+  580  man history
+  581  history 
+  582  history command-line-basics
+  583  history > command-history.txt
