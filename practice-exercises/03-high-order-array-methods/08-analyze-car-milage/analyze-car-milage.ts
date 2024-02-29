@@ -12,10 +12,28 @@ type Mileage = {
 };
 
 export function analyzeCarMileage(cars: Car[]): Mileage {
+  const mileageArr = cars.map((car: Car) => car.mileage);
+  const totalMileage = mileageArr.reduce(
+    (total: number, miles: number) => total + miles,
+    0
+  );
+  const averageMileage = totalMileage / cars.length;
+  const highestMileageCar = cars.reduce((highestCar: Car, car: Car) => {
+    if (car.mileage > highestCar.mileage) {
+      highestCar = car;
+    }
+    return highestCar;
+  });
+  const lowestMileageCar = cars.reduce((lowestCar: Car, car: Car) => {
+    if (car.mileage < lowestCar.mileage) {
+      lowestCar = car;
+    }
+    return lowestCar;
+  });
   return {
-    averageMileage: 0,
-    highestMileageCar: cars[0],
-    lowestMileageCar: cars[0],
-    totalMileage: 0,
+    averageMileage,
+    highestMileageCar,
+    lowestMileageCar,
+    totalMileage,
   };
 }
