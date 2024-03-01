@@ -1,3 +1,6 @@
 export function arraySum(arr: number[]): number {
-  return NaN;
+  if (arr.length === 0) {
+    return 0;
+  }
+  return arr[0] + arraySum(arr.slice(1));
 }

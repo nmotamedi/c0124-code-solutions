@@ -1,3 +1,6 @@
 export function reverseString(str: string): string {
-  return '';
+  if (str === '') {
+    return str;
+  }
+  return reverseString(str.slice(1)) + str[0];
 }
