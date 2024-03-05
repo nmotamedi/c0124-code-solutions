@@ -1,12 +1,18 @@
-'use strict';
-function pairSum(array, sum) {
-  for (let n = 0; n < array.length; n++) {
-    if (array.includes(sum - array[n]) && array[n] !== sum - array[n]) {
-      return true;
+"use strict";
+const url = 'https://cartes.io/api/maps';
+const headers = {
+    "Accept": "application/json",
+};
+async function getParkData() {
+    try {
+        const resp = await fetch(url, { headers: headers });
+        if (!resp.ok)
+            throw new Error("Network Error");
+        const YoseThingsData = await resp.json();
+        console.log(YoseThingsData);
     }
-  }
-  return false;
+    catch (e) {
+        console.error(e);
+    }
 }
-console.log('Test 1', pairSum([1, 2, 3, 4], 8));
-console.log('Test 2', pairSum([1, 2, 3, 4], 3));
-console.log('Test 2', pairSum([1, 2, 3, 4], 4));
+getParkData();
