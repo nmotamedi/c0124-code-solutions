@@ -9,7 +9,7 @@ Answer the following questions in the provided markdown file before turning in t
 - What is a React component?
   A piece of the web page made up of logic and appearance that can be compiled and reused.
 - How do you mount a React app (root component) to the DOM?
-  Importing each component into the main.tsx, which compiles into the index.html.
+  Importing each component into the main.tsx, then CreateDOM, which compiles into the index.html.
 - What are some other popular frontend frameworks?
   Angular, Vue, Svelte
 
