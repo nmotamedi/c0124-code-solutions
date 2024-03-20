@@ -9,6 +9,7 @@
 - Add clearInterval function as onClick handler for pause Icon.•
 - Add handler function to number face to reset setCount(0) if pauseState=True.•
 - Add css to number to add padding, border and border-radius •
+- Use Paused state to place the correct icon. •
 
 ## Notes
 
