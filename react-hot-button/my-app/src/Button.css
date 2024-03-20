@@ -1,0 +1,31 @@
+.purple {
+  background-color: purple;
+  color: white;
+}
+
+.lavender {
+  background-color: rgb(223, 117, 255);
+  color: white;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
