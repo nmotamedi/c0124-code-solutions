@@ -17,7 +17,7 @@ export function Stopwatch({
   return (
     <div>
       <h1 onClick={onFaceClick}>{count}</h1>
-      {pauseState ? (
+      {!pauseState ? (
         <FaPlay onClick={onIconClick} />
       ) : (
         <FaPause onClick={onIconClick} />

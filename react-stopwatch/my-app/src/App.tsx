@@ -4,26 +4,25 @@ import { Stopwatch } from './Stopwatch';
 
 function App() {
   const [count, setCount] = useState(0);
-  const [pause, setPause] = useState(true);
   const [intervalIDState, setID] = useState<NodeJS.Timeout>();
+  const play: boolean = !!intervalIDState;
 
   function countUp() {
     setCount((count) => count + 1);
   }
 
   function handleIconClick() {
-    if (pause) {
+    if (!play) {
       const intervalID = setInterval(countUp, 1000);
       setID(intervalID);
-      setPause(false);
     } else {
+      setID(undefined);
       clearInterval(intervalIDState);
-      setPause(true);
     }
   }
 
   function handleFaceClick() {
-    if (pause) {
+    if (!play) {
       setCount(0);
     }
   }
@@ -33,7 +32,7 @@ function App() {
       onIconClick={handleIconClick}
       onFaceClick={handleFaceClick}
       count={count}
-      pauseState={pause}
+      pauseState={play}
     />
   );
 }
