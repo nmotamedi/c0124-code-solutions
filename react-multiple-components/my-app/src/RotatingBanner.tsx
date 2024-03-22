@@ -1,6 +1,5 @@
 import { Text } from './Text';
-import { PrevNextButtons } from './PrevNextButtons';
-import { Numbers } from './Numbers';
+import { Buttons } from './Buttons';
 import React, { useState } from 'react';
 
 type Prop = {
@@ -38,15 +37,15 @@ export function RotatingBanner({ items }: Prop) {
         <Text text={items[currentIndex]} />
       </div>
       <div>
-        <PrevNextButtons onClick={handlePrev} text="Prev" />
+        <Buttons onClick={handlePrev} text="Prev" />
       </div>
-      <Numbers
+      <Buttons
         onClick={handleNumClick}
         length={items.length}
         index={currentIndex}
       />
       <div>
-        <PrevNextButtons onClick={handleNext} text="Next" />
+        <Buttons onClick={handleNext} text="Next" />
       </div>
     </>
   );
