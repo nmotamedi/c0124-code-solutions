@@ -3,9 +3,10 @@ import './Numbers.css';
 type Props = {
   length: number;
   index: number;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export function Numbers({ length, index }: Props) {
+export function Numbers({ length, index, onClick }: Props) {
   const numArr = [];
   for (let i = 0; i < length; i++) {
     numArr.push(i);
@@ -15,7 +16,11 @@ export function Numbers({ length, index }: Props) {
     if (i === index) {
       className = 'blue';
     }
-    return <button className={className}>{num}</button>;
+    return (
+      <button key={i} onClick={onClick} className={className}>
+        {num}
+      </button>
+    );
   });
   return <div>{numButtons}</div>;
 }

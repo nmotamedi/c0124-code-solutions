@@ -1,14 +1,36 @@
 import { Text } from './Text';
 import { PrevNextButtons } from './PrevNextButtons';
 import { Numbers } from './Numbers';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 type Prop = {
   items: string[];
 };
 
 export function RotatingBanner({ items }: Prop) {
-  const [currentIndex /*, setCurrentIndex */] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  function handlePrev() {
+    if (currentIndex === 0) {
+      setCurrentIndex(items.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  }
+
+  function handleNext() {
+    if (currentIndex === items.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  }
+
+  function handleNumClick(event: React.MouseEvent<HTMLButtonElement>) {
+    const eventTarget = event.target as HTMLButtonElement;
+    const num = eventTarget.textContent;
+    setCurrentIndex(+num!);
+  }
 
   return (
     <>
@@ -16,11 +38,15 @@ export function RotatingBanner({ items }: Prop) {
         <Text text={items[currentIndex]} />
       </div>
       <div>
-        <PrevNextButtons text="Prev" />
+        <PrevNextButtons onClick={handlePrev} text="Prev" />
       </div>
-      <Numbers length={items.length} index={currentIndex} />
+      <Numbers
+        onClick={handleNumClick}
+        length={items.length}
+        index={currentIndex}
+      />
       <div>
-        <PrevNextButtons text="Next" />
+        <PrevNextButtons onClick={handleNext} text="Next" />
       </div>
     </>
   );

@@ -1,8 +1,8 @@
 type Props = {
   text: string;
-  onClickHandler?: () => void;
+  onClick?: () => void;
 };
 
-export function PrevNextButtons({ text, onClickHandler }: Props) {
-  return <button onClick={onClickHandler}>{text}</button>;
+export function PrevNextButtons({ text, onClick }: Props) {
+  return <button onClick={onClick}>{text}</button>;
 }
