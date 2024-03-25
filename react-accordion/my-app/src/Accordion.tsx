@@ -1,20 +1,35 @@
 import './Accordion.css';
 import { useState } from 'react';
 
+type Topic = {
+  id: number;
+  title: string;
+  content: string;
+};
+
 type Prop = {
-  topics: {
-    id: number;
-    title: string;
-    content: string;
-  }[];
+  topics: Topic[];
 };
 
 export function Accordion({ topics }: Prop) {
   const [currentID, setCurrentID] = useState(0);
+
+  function handleCardClick(clickedId: number) {
+    if (clickedId === currentID) {
+      setCurrentID(0);
+    } else {
+      setCurrentID(clickedId);
+    }
+  }
+
   const topicComponents = topics.map((topic) => {
     return (
       <div key={topic.id}>
-        <TopicCard topic={topic} currentID={currentID} onClick={setCurrentID} />
+        <TopicCard
+          topic={topic}
+          isOpen={topic.id === currentID}
+          onClick={handleCardClick}
+        />
       </div>
     );
   });
@@ -22,22 +37,16 @@ export function Accordion({ topics }: Prop) {
 }
 
 type CardProp = {
-  topic: {
-    id: number;
-    title: string;
-    content: string;
-  };
-  currentID: number;
+  topic: Topic;
+  isOpen: boolean;
   onClick: (arg0: number) => void;
 };
 
-function TopicCard({ topic, currentID, onClick }: CardProp) {
+function TopicCard({ topic, isOpen, onClick }: CardProp) {
   return (
     <>
-      <button onClick={() => onClick(topic.id === currentID ? 0 : topic.id)}>
-        {topic.title}
-      </button>
-      {topic.id === currentID && <p>{topic.content}</p>}
+      <button onClick={() => onClick(topic.id)}>{topic.title}</button>
+      {isOpen && <p>{topic.content}</p>}
     </>
   );
 }
