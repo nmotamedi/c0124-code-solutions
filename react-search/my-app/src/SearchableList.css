@@ -1,0 +1,15 @@
+input {
+  width: 500px;
+}
+
+ul {
+  width: 500px;
+}
+
+li {
+  text-align: left;
+}
+
+img {
+  height: 1rem;
+}
