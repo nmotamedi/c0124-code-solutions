@@ -53,6 +53,9 @@ function List({ list }: ListProps) {
     listItems.push(lItem);
   }
   return (
-    <ul>{list.length === 0 ? <p>No Items Found</p> : <>{listItems}</>}</ul>
+    <ul>
+      {!list.length && <p>No Items Found</p>}
+      {list.length !== 0 && <>{listItems}</>}
+    </ul>
   );
 }
