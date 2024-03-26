@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 
 export function Counter() {
   const getData = useCallback(() => {
-    // fetch data
     return { foo: 'bar' };
   }, []);
 
