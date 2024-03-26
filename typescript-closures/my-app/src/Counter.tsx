@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from 'react';
 export function Counter() {
   const getData = useCallback(() => {
     // fetch data
-    console.log('running');
     return { foo: 'bar' };
   }, []);
 
