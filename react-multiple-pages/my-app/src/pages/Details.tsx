@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import { type Item, readItem } from '../lib/read';
 import './Details.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
-type Props = {
-  itemId: number;
-};
-export function Details({ itemId }: Props) {
+export function Details() {
+  const itemId = useParams().itemID;
   const [item, setItem] = useState<Item>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
