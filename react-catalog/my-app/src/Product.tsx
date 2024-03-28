@@ -5,6 +5,8 @@ import { toDollars, readProduct, Product } from './lib';
 export function ProductPage() {
   const itemId = useParams().itemID;
   const [product, setProduct] = useState<Product>();
+  const [error, setError] = useState<unknown>();
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -12,8 +14,10 @@ export function ProductPage() {
       try {
         const prodResp = await readProduct(+itemId!);
         setProduct(prodResp);
-      } catch {
-        return <h1>Error loading Product</h1>;
+      } catch (e) {
+        setError(e);
+      } finally {
+        setIsLoading(false);
       }
     }
     work();
@@ -24,31 +28,35 @@ export function ProductPage() {
     navigate('/');
   }
 
-  if (!product) {
+  if (isLoading) {
     return <h1>Loading...</h1>;
-  } else {
-    return (
-      <>
-        <Link to="/">
-          <h3> Back to catalog</h3>
-        </Link>
-        <div className="product-container">
-          <div className="row">
-            <div className="column-half">
-              <img src={product.imageUrl} alt={product.name} />
-            </div>
-            <div className="column-half">
-              <h2>{product.name}</h2>
-              <h3>{toDollars(product.price)}</h3>
-              <p>{product.shortDescription}</p>
-            </div>
-          </div>
-          <div className="row">
-            <p>{product.longDescription}</p>
-          </div>
-          <button onClick={handleAddToCart}>Add to Cart</button>
-        </div>
-      </>
-    );
   }
+
+  if (error || !product) {
+    return <h1>{`Error: ${error}`}</h1>;
+  }
+
+  return (
+    <>
+      <Link to="/">
+        <h3> Back to catalog</h3>
+      </Link>
+      <div className="product-container">
+        <div className="row">
+          <div className="column-half">
+            <img src={product.imageUrl} alt={product.name} />
+          </div>
+          <div className="column-half">
+            <h2>{product.name}</h2>
+            <h3>{toDollars(product.price)}</h3>
+            <p>{product.shortDescription}</p>
+          </div>
+        </div>
+        <div className="row">
+          <p>{product.longDescription}</p>
+        </div>
+        <button onClick={handleAddToCart}>Add to Cart</button>
+      </div>
+    </>
+  );
 }
