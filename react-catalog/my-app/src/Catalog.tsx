@@ -4,23 +4,35 @@ import { readCatalog, toDollars, Product } from './lib';
 
 export function Catalog() {
   const [products, setProducts] = useState<Product[]>();
+  const [error, setError] = useState<unknown>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function work() {
       try {
         const productList = await readCatalog();
         setProducts(productList);
-      } catch {
-        return <h1>Error loading</h1>;
+      } catch (e) {
+        setError(e);
+      } finally {
+        setIsLoading(false);
       }
     }
     work();
-  });
+  }, []);
 
-  if (!products) {
+  if (isLoading) {
     return (
       <>
         <h1>Loading...</h1>
+      </>
+    );
+  }
+
+  if (error || !products) {
+    return (
+      <>
+        <h1>{`Error! ${error}`}</h1>
       </>
     );
   }
