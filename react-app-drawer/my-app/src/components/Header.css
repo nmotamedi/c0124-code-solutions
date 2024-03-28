@@ -1,0 +1,43 @@
+.title {
+  color: white;
+}
+
+.headerRow {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 1150px;
+  justify-content: start;
+}
+
+.navbar-column {
+  flex-basis: 15rem;
+  background-color: rgb(196, 196, 196);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-column.closed {
+  flex-basis: 5rem;
+}
+
+.content-column {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.navbar-column img {
+  height: 2rem;
+}
+
+.navbar-column h2 {
+  color: black;
+}
+
+.navbar-column .row {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
