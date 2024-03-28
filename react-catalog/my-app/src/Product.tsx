@@ -17,7 +17,7 @@ export function ProductPage() {
       }
     }
     work();
-  });
+  }, [itemId]);
 
   function handleAddToCart() {
     alert(`${product?.name} added to cart`);

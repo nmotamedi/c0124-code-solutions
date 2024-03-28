@@ -4,6 +4,7 @@ import { Catalog } from './Catalog';
 import './App.css';
 import { About } from './About';
 import { ProductPage } from './Product';
+import { NotFound } from './NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Catalog />} />
           <Route path="about" element={<About />} />
           <Route path="product/:itemID" element={<ProductPage />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>
