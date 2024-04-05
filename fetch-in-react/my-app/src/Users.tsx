@@ -22,6 +22,9 @@ export function Users() {
     async function getUsers() {
       try {
         const resp = await fetch('https://jsonplaceholder.typicode.com/users');
+        if (!resp.ok) {
+          throw new Error('Unable to fetch users');
+        }
         const usersJSON = await resp.json();
         const tenUsers: User[] = [];
         for (let i = 0; i < 10; i++) {
