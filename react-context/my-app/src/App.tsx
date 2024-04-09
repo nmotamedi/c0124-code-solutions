@@ -4,7 +4,7 @@ import { About } from './pages/About';
 import { Catalog } from './pages/Catalog';
 import { NotFound } from './pages/NotFound';
 import { ProductDetails } from './pages/ProductDetails';
-import { Cart, CartContext } from './components/CartContext';
+import { Cart, CartProvider } from './components/CartContext';
 import { useState } from 'react';
 import { Product } from './lib';
 
@@ -59,7 +59,7 @@ export function App() {
   }
 
   return (
-    <CartContext.Provider
+    <CartProvider
       value={{
         cartArray: cart,
         addFunction: addItem,
@@ -73,6 +73,6 @@ export function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </CartContext.Provider>
+    </CartProvider>
   );
 }

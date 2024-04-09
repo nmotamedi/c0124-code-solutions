@@ -19,3 +19,5 @@ const defaultShoppingCart: ShoppingCart = {
 };
 
 export const CartContext = createContext<ShoppingCart>(defaultShoppingCart);
+
+export const CartProvider = CartContext.Provider;
